@@ -12,5 +12,7 @@ class PersonaController extends Controller
         $persona->apellido = $request->apellido;
         $persona->telefono = $request->telefono;
         $persona->save();
+        return "Persona creada con exito";
     }
+
 }
