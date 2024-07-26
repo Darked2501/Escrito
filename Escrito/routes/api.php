@@ -3,7 +3,6 @@
 use App\Http\Controllers\PersonaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/Personas', [PersonaController::class, 'ListarPersonas']);
 Route::post('/personas/baja/{id}', [PersonaController::class, 'BajaPersona']);
 Route::post('/personas', [PersonaController::class, 'AltaPersona']);
 Route::post('/personas/{id}', [PersonaController::class, 'ModificarPersona']);
