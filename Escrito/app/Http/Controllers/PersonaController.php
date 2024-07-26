@@ -44,6 +44,14 @@ class PersonaController extends Controller
             $persona->save();
             return "Persona creada con exito";
         }
+
+        public function ListarPersonasVista(){
+            $personas = persona::all();
+    
+    
+            return view('VerPersonaCargada',)->with($personas);
+
+        }
 }
 
 
