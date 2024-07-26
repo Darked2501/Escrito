@@ -13,16 +13,6 @@ class PersonaController extends Controller
         }
         return "Persona eliminada correctamente";
     }
-}
-
-<?php
-
-namespace App\Http\Controllers;
-use App\Models\Persona;
-use Illuminate\Http\Request;
-
-class PersonaController extends Controller
-{
     public function AltaPersona(Request $request){
         $persona = new Persona();
         $persona->nombre = $request->nombre;
